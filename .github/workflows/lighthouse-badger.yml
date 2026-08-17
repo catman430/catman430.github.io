@@ -9,6 +9,27 @@
 name: "Lighthouse Badger"
 
 ########################################################################
+# NOTE ABOUT THE CHECKOUT TOKEN
+#
+# This workflow may need to push files to another repository/branch (controlled by REPO_BRANCH).
+# - If you operate only inside this same repository, you can use the automatically provided
+#   `secrets.GITHUB_TOKEN` (it is set by GitHub Actions and requires no manual setup).
+# - If the workflow must push to a different repository or needs elevated permissions,
+#   create a Personal Access Token (PAT) and add it as a repository secret named
+#   `LIGHTHOUSE_BADGER_TOKEN`. Example steps to create the secret:
+#     1. Create a PAT at https://github.com/settings/tokens (Generate new token).
+#        - Recommended scopes: `repo` (for push access to repositories you target).
+#        - If you restrict access to organization repos or need additional scopes, add them accordingly.
+#     2. In the GitHub repository, go to Settings → Secrets and variables → Actions → New repository secret.
+#     3. Name the secret `LIGHTHOUSE_BADGER_TOKEN` and paste the PAT value.
+#     4. This workflow will then use that secret for cross-repo pushes.
+#
+# Keep the token secret and avoid printing it in logs. The workflow below expects
+# `LIGHTHOUSE_BADGER_TOKEN` to exist when you need a PAT; otherwise switch to
+# `secrets.GITHUB_TOKEN` for same-repo operations.
+########################################################################
+
+########################################################################
 # DEFINE YOUR INPUTS AND TRIGGERS IN THE FOLLOWING
 ########################################################################
 
@@ -49,7 +70,10 @@ jobs:
       - uses: actions/checkout@v4
         with:
           repository: ${{ env.REPOSITORY }}
-          token: ${{ secrets.GITHUB_TOKEN }}
+          # Use a PAT stored in repository secrets for cross-repo pushes or elevated permissions.
+          # Create a repository secret named `LIGHTHOUSE_BADGER_TOKEN` (see note at top) and
+          # uncomment the next line to use it.
+          token: ${{ secrets.LIGHTHOUSE_BADGER_TOKEN }}
           ref: ${{ env.BRANCH }}
       - uses: actions/checkout@v4
         with:
