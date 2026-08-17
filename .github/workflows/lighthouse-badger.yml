@@ -25,8 +25,8 @@ name: "Lighthouse Badger"
 #     4. This workflow will then use that secret for cross-repo pushes.
 #
 # Keep the token secret and avoid printing it in logs. The workflow below expects
-# `LIGHTHOUSE_BADGER_TOKEN` to exist when you need a PAT; otherwise switch to
-# `secrets.GITHUB_TOKEN` for same-repo operations.
+# `LIGHTHOUSE_BADGER_TOKEN` to exist when you need a PAT; otherwise the checkout step
+# will automatically fall back to `secrets.GITHUB_TOKEN`.
 ########################################################################
 
 ########################################################################
@@ -67,19 +67,19 @@ jobs:
           echo "BRANCH=$BRANCH" >> $GITHUB_ENV
         env:
           REPO_BRANCH: ${{ env.REPO_BRANCH }}
-      - name: Check for LIGHTHOUSE_BADGER_TOKEN
+      - name: Warn if LIGHTHOUSE_BADGER_TOKEN is missing (non-blocking)
         run: |
           if [ -z "${{ secrets.LIGHTHOUSE_BADGER_TOKEN }}" ]; then
-            echo "ERROR: LIGHTHOUSE_BADGER_TOKEN secret is not set. Create it at Settings → Secrets and variables → Actions."
-            exit 1
+            echo "::warning::LIGHTHOUSE_BADGER_TOKEN secret is not set. The workflow will continue and attempt to use GITHUB_TOKEN for same-repo operations." 
+            echo "If you need cross-repo push permissions, create a PAT and add it as a secret named LIGHTHOUSE_BADGER_TOKEN."
+          else
+            echo "LIGHTHOUSE_BADGER_TOKEN is present. Using PAT for checkout/push operations."
           fi
       - uses: actions/checkout@v4
         with:
           repository: ${{ env.REPOSITORY }}
-          # Use a PAT stored in repository secrets for cross-repo pushes or elevated permissions.
-          # Create a repository secret named `LIGHTHOUSE_BADGER_TOKEN` (see note at top) and
-          # uncomment the next line to use it.
-          token: ${{ secrets.LIGHTHOUSE_BADGER_TOKEN }}
+          # Use the PAT if present; otherwise fall back to the automatically provided GITHUB_TOKEN.
+          token: ${{ secrets.LIGHTHOUSE_BADGER_TOKEN || github.token }}
           ref: ${{ env.BRANCH }}
       - uses: actions/checkout@v4
         with:
