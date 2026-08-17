@@ -1,8 +1,8 @@
 # Site settings
-title: Malek AOUADJ
-first_name: Malek
-middle_name: 
-last_name: AOUADJ
+title: "Malek AOUADJ"
+first_name: "Malek"
+middle_name: ""
+last_name: "AOUADJ"
 contact_note: >
   Contactez-moi de préférence par email.
 description: >
@@ -11,30 +11,34 @@ description: >
   mécatronique avancée et sûreté de fonctionnement.
 footer_text: >
   Propulsé par <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> et hébergé par <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.
-keywords: systèmes critiques, défense-grade, IA embarquée, systèmes autonomes, mécatronique, sûreté, DGA, SCAC, HDPI
-lang: fr
-icon: 🛡️
+keywords: "systèmes critiques, défense-grade, IA embarquée, systèmes autonomes, mécatronique, sûreté, DGA, SCAC, HMI"
 
-url: https://catman430.github.io
-baseurl: /
+lang: fr
+icon: "🇫🇷"
+
+url: "https://catman430.github.io"
+baseurl: "/"
 last_updated: true
 back_to_top: true
 
 # Social
-github_username: catman430
-linkedin_username: malek-aouadj
-google_scholar_id: 
+social:
+  github: "catman430"
+  linkedin: "malek-aouadj"
+  google_scholar_id: ""
 
 # Navigation
-navbar_fixed: true
-footer_fixed: true
+navigation:
+  navbar_fixed: true
+  footer_fixed: true
 
-# Theme
-repo_color_theme_light: default
-repo_color_theme_dark: dark
-
-# Build settings
+# Theme / Appearance
 theme: al_folio_core
+repo_color_theme:
+  light: default
+  dark: dark
+
+# Plugins (vérifier compatibilité GitHub Pages)
 plugins:
   - jekyll-remote-theme
   - jekyll-seo-tag
@@ -42,14 +46,13 @@ plugins:
   - jekyll-feed
   - jemoji
 
+# Markdown / highlighting
 markdown: kramdown
 highlighter: rouge
 kramdown:
   input: GFM
   syntax_highlighter_opts:
     css_class: "highlight"
-    span:
-      line_numbers: false
     block:
       line_numbers: false
       start_line: 1
@@ -67,11 +70,10 @@ keep_files:
   - CNAME
   - .nojekyll
 
-defaults:
-  - scope:
-      path: "assets"
-    values:
-      sitemap: false
-
 sass:
   style: compressed
+
+# Site-specific flags
+site_settings:
+  dernier_mise_a_jour: true
+  retour_en_haut: true
