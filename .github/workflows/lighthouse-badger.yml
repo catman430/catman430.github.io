@@ -79,7 +79,7 @@ jobs:
         with:
           repository: ${{ env.REPOSITORY }}
           # Use the PAT if present; otherwise fall back to the automatically provided GITHUB_TOKEN.
-          token: ${{ secrets.LIGHTHOUSE_BADGER_TOKEN || github.token }}
+          token: ${{ secrets.LIGHTHOUSE_BADGER_TOKEN || secrets.GITHUB_TOKEN }}
           ref: ${{ env.BRANCH }}
       - uses: actions/checkout@v4
         with:
