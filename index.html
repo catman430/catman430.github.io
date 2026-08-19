@@ -17,7 +17,6 @@
             margin: 0 auto;
             padding: 20px;
         }
-        /* Header */
         header {
             text-align: center;
             padding: 60px 0 40px;
@@ -37,7 +36,7 @@
         header .badges {
             margin-top: 20px;
         }
-        /* PHOTO DE PROFIL - CE QUI MANQUAIT */
+        /* PHOTO DE PROFIL - CORRECTEMENT DÉFINIE */
         .profile-photo {
             width: 150px;
             height: 150px;
@@ -45,6 +44,7 @@
             border: 3px solid #ff6b35;
             margin-top: 15px;
             object-fit: cover;
+            display: inline-block;
         }
         .badge {
             display: inline-block;
@@ -61,7 +61,6 @@
             color: #ff6b35;
             border: 1px solid #ff6b35;
         }
-        /* Sections */
         section {
             padding: 40px 0;
             border-bottom: 1px solid #1a1a1a;
@@ -159,9 +158,9 @@
 <body>
     <div class="container">
 
-                <!-- HEADER -->
+        <!-- HEADER AVEC PHOTO -->
         <header>
-            <img src="assetsimg/photo.jpg" alt="Malek AOUADJ" style="width: 150px; height: 150px; border-radius: 50%; border: 3px solid #ff6b35; margin-top: 15px;">
+            <img src="assetsimg/photo.jpg" alt="Malek AOUADJ" class="profile-photo">
             <h1>Malek AOUADJ</h1>
             <p class="subtitle">Ingénieur R&D Senior — Systèmes Critiques Défense-Grade</p>
             <div class="badges">
