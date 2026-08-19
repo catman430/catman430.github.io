@@ -1,1 +1,392 @@
-<a href="scac.html" class="badge badge-dark" style="text-decoration: none;">🛡️ SCAC</a>
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HDPI - Projet R&D | Malek AOUADJ</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: #0a0a0a;
+            color: #e0e0e0;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        header {
+            text-align: center;
+            padding: 60px 0 40px;
+            border-bottom: 1px solid #222;
+        }
+        header h1 {
+            font-size: 3em;
+            color: #ff6b35;
+            font-weight: 700;
+            letter-spacing: -1px;
+        }
+        header .subtitle {
+            font-size: 1.3em;
+            color: #aaa;
+            margin-top: 10px;
+        }
+        header .badge {
+            display: inline-block;
+            background: #ff6b35;
+            color: #fff;
+            padding: 6px 20px;
+            border-radius: 30px;
+            font-size: 0.85em;
+            font-weight: 600;
+            margin: 5px;
+        }
+        section {
+            padding: 40px 0;
+            border-bottom: 1px solid #1a1a1a;
+        }
+        section:last-child {
+            border-bottom: none;
+        }
+        h2 {
+            font-size: 1.8em;
+            color: #ff6b35;
+            margin-bottom: 25px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        h2::after {
+            content: '';
+            flex: 1;
+            height: 1px;
+            background: #222;
+        }
+        h3 {
+            color: #ff6b35;
+            font-size: 1.3em;
+            margin: 20px 0 15px;
+        }
+        .grid-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 25px;
+        }
+        .grid-3 {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 25px;
+        }
+        .card {
+            background: #111;
+            padding: 25px;
+            border-radius: 12px;
+            border-left: 4px solid #ff6b35;
+            transition: transform 0.2s;
+        }
+        .card:hover {
+            transform: translateY(-3px);
+        }
+        .card h3 {
+            color: #fff;
+            font-size: 1.2em;
+            margin-bottom: 8px;
+        }
+        .card p {
+            color: #999;
+            font-size: 0.95em;
+        }
+        .card ul {
+            list-style: none;
+            padding: 0;
+            margin-top: 10px;
+        }
+        .card ul li {
+            padding: 6px 0;
+            border-bottom: 1px solid #1a1a1a;
+            color: #ccc;
+            font-size: 0.9em;
+        }
+        .card ul li:last-child {
+            border-bottom: none;
+        }
+        .timeline {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            justify-content: center;
+        }
+        .timeline-item {
+            background: #111;
+            padding: 20px 30px;
+            border-radius: 10px;
+            border-top: 3px solid #ff6b35;
+            flex: 1;
+            min-width: 150px;
+            text-align: center;
+        }
+        .timeline-item .phase {
+            color: #ff6b35;
+            font-weight: 600;
+        }
+        .timeline-item .duration {
+            color: #888;
+            font-size: 0.85em;
+        }
+        .contact {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            padding: 10px 0;
+            justify-content: center;
+            text-align: center;
+        }
+        .contact a {
+            color: #ff6b35;
+            text-decoration: none;
+        }
+        .contact a:hover {
+            text-decoration: underline;
+        }
+        .btn {
+            display: inline-block;
+            background: #ff6b35;
+            color: #fff;
+            padding: 12px 30px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background 0.2s;
+        }
+        .btn:hover {
+            background: #e05a2a;
+        }
+        .btn-secondary {
+            background: transparent;
+            border: 2px solid #ff6b35;
+            color: #ff6b35;
+        }
+        .btn-secondary:hover {
+            background: #ff6b35;
+            color: #fff;
+        }
+        footer {
+            text-align: center;
+            padding: 30px 0 20px;
+            color: #555;
+            font-size: 0.9em;
+            border-top: 1px solid #1a1a1a;
+            margin-top: 20px;
+        }
+        @media (max-width: 768px) {
+            .grid-2, .grid-3 {
+                grid-template-columns: 1fr;
+            }
+            header h1 {
+                font-size: 2em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+
+        <header>
+            <h1>💾 HDPI</h1>
+            <p class="subtitle">Hard Disc Processor Inside</p>
+            <p>
+                <span class="badge">🚀 R&D</span>
+                <span class="badge">🔬 IA &amp; Big Data</span>
+                <span class="badge">⚡ Eco-énergie</span>
+            </p>
+        </header>
+
+        <section>
+            <h2>🎯 Présentation</h2>
+            <p style="font-size: 1.1em; color: #ccc; text-align: center; max-width: 800px; margin: 0 auto;">
+                <strong>HDPI</strong> est une révolution dans le traitement des données : un <strong>processeur embarqué directement sur le disque dur</strong>, réduisant la latence et optimisant la gestion de l'IA et du Big Data.
+            </p>
+        </section>
+
+        <section>
+            <h2>⚡ Problème à résoudre</h2>
+            <div class="grid-2">
+                <div class="card">
+                    <h3>📉 Problématique actuelle</h3>
+                    <ul>
+                        <li>📊 Croissance massive des données = infrastructures puissantes et énergivores</li>
+                        <li>🚦 Goulots d'étranglement des architectures centralisées</li>
+                        <li>⚡ Consommation énergétique explosive des centres de données</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h3>💡 Notre solution</h3>
+                    <ul>
+                        <li>🧠 Processeur local intégré au disque dur</li>
+                        <li>⚡ Réduction de la latence (pas de transfert inutile)</li>
+                        <li>🌿 Consommation énergétique optimisée</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>📈 Opportunité de marché</h2>
+            <div class="grid-3">
+                <div class="card">
+                    <h3>🌍 Marché mondial</h3>
+                    <p style="font-size: 2em; color: #ff6b35;">+100 Md€</p>
+                    <p>Stockage &amp; IA en 2025</p>
+                </div>
+                <div class="card">
+                    <h3>📊 Demande croissante</h3>
+                    <p>Solutions de calcul <strong>décentralisé</strong> et <strong>écoénergétiques</strong></p>
+                </div>
+                <div class="card">
+                    <h3>🎯 Industries cibles</h3>
+                    <p>Cloud Computing · Big Data · Centres de recherche · Entreprises IA</p>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>🔬 Solution technologique</h2>
+            <div class="grid-2">
+                <div class="card">
+                    <h3>🧩 Caractéristiques</h3>
+                    <ul>
+                        <li><strong>Processeur embarqué</strong> : Traitement directement sur le disque dur</li>
+                        <li><strong>Optimisation IA &amp; Big Data</strong> : Algorithmes embarqués</li>
+                        <li><strong>Efficacité énergétique</strong> : Architecture optimisée</li>
+                        <li><strong>Compatibilité</strong> : Intégration facile avec les systèmes existants</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h3>🔒 Protection</h3>
+                    <ul>
+                        <li>✅ Brevet déposé (INPI)</li>
+                        <li>✅ Innovation disruptive</li>
+                        <li>✅ Aucune solution similaire sur le marché</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>📊 Business model &amp; Financement</h2>
+            <div class="grid-2">
+                <div class="card">
+                    <h3>💼 Proposition investisseurs</h3>
+                    <ul>
+                        <li>📅 Financement à long terme</li>
+                        <li>📈 Propriété : 40% entreprise / 60% investisseurs</li>
+                        <li>💰 Partage des bénéfices futurs</li>
+                        <li>🚫 Pas de prévente ni retour immédiat</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h3>🌱 Avantages concurrentiels</h3>
+                    <ul>
+                        <li>🛡️ Innovation disruptive</li>
+                        <li>📜 Brevet &amp; protection INPI</li>
+                        <li>🌍 Impact écologique positif</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>🗓️ Feuille de route</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="phase">Phase 1</div>
+                    <div><strong>R&amp;D</strong></div>
+                    <div class="duration">6 mois</div>
+                    <div style="color:#888; font-size:0.9em;">Conception &amp; validation du prototype</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="phase">Phase 2</div>
+                    <div><strong>Prototypage avancé</strong></div>
+                    <div class="duration">12 mois</div>
+                    <div style="color:#888; font-size:0.9em;">Tests &amp; optimisations</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="phase">Phase 3</div>
+                    <div><strong>Industrialisation</strong></div>
+                    <div class="duration">24 mois</div>
+                    <div style="color:#888; font-size:0.9em;">Production &amp; mise sur le marché</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="phase">Phase 4</div>
+                    <div><strong>Commercialisation</strong></div>
+                    <div class="duration">—</div>
+                    <div style="color:#888; font-size:0.9em;">Partenaires &amp; intégrateurs</div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>👥 Équipe &amp; Partenaires</h2>
+            <div class="grid-2">
+                <div class="card">
+                    <h3>👨‍💼 Fondateur / CEO</h3>
+                    <p style="font-size: 1.1em; color: #fff;">Malek AOUADJ</p>
+                    <p>Ingénieur R&D Senior · 20+ ans d'expérience</p>
+                    <p style="color:#888; font-size:0.9em;">Expert en systèmes critiques, mécatronique et IA</p>
+                </div>
+                <div class="card">
+                    <h3>🤝 Partenaires</h3>
+                    <ul>
+                        <li>🧠 Explorama IA — Laboratoire d'innovation</li>
+                        <li>🔬 Programme SCAC</li>
+                        <li>📡 Réseau VALEO (expérience préalable)</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>🎯 Prochaines étapes</h2>
+            <div class="grid-2">
+                <div class="card">
+                    <h3>💰 Recherche d'investisseurs</h3>
+                    <p>Investisseurs stratégiques pour financer le prototypage</p>
+                </div>
+                <div class="card">
+                    <h3>🤝 Partenariats</h3>
+                    <p>Développement de partenariats technologiques pour accélérer l'industrialisation</p>
+                </div>
+                <div class="card">
+                    <h3>📊 Validation commerciale</h3>
+                    <p>Présentation aux grands acteurs du marché</p>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>📞 Contact</h2>
+            <div class="contact">
+                <p>📧 <a href="mailto:a2atouts@proton.me">a2atouts@proton.me</a></p>
+                <p>📱 +33 06 12 96 29 96</p>
+                <p>🔗 <a href="https://www.explorama-ai.com/" target="_blank">explorama-ai.com</a></p>
+                <p>📍 Lugrin (74500), France</p>
+            </div>
+            <div style="text-align: center; margin-top: 20px;">
+                <a href="index.html" class="btn btn-secondary">🏠 Retour à l'accueil</a>
+                <a href="mailto:a2atouts@proton.me" class="btn" style="margin-left: 15px;">📩 Nous contacter</a>
+            </div>
+        </section>
+
+        <footer>
+            <p>© 2024-2026 Malek AOUADJ — Projet HDPI — Explorama AI</p>
+        </footer>
+
+    </div>
+</body>
+</html>
