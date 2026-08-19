@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="fr">
+<!-- mise à jour -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Malek AOUADJ - Ingénieur R&D Senior</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: #0a0a0a;
+            color: #e0e0e0;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        /* Header */
+        header {
+            text-align: center;
+            padding: 60px 0 40px;
+            border-bottom: 1px solid #222;
+        }
+        header h1 {
+            font-size: 3em;
+            color: #ff6b35;
+            font-weight: 700;
+            letter-spacing: -1px;
+        }
+        header .subtitle {
+            font-size: 1.3em;
+            color: #aaa;
+            margin-top: 10px;
+        }
+        header .badges {
+            margin-top: 20px;
+        }
+        .badge {
+            display: inline-block;
+            background: #ff6b35;
+            color: #fff;
+            padding: 6px 20px;
+            border-radius: 30px;
+            font-size: 0.85em;
+            font-weight: 600;
+            margin: 5px;
+        }
+        .badge-dark {
+            background: #222;
+            color: #ff6b35;
+            border: 1px solid #ff6b35;
+        }
+        /* Sections */
+        section {
+            padding: 40px 0;
+            border-bottom: 1px solid #1a1a1a;
+        }
+        section:last-child {
+            border-bottom: none;
+        }
+        h2 {
+            font-size: 1.8em;
+            color: #ff6b35;
+            margin-bottom: 25px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        h2::after {
+            content: '';
+            flex: 1;
+            height: 1px;
+            background: #222;
+        }
+        .grid-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 25px;
+        }
+        .grid-3 {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 25px;
+        }
+        .card {
+            background: #111;
+            padding: 25px;
+            border-radius: 12px;
+            border-left: 4px solid #ff6b35;
+            transition: transform 0.2s;
+        }
+        .card:hover {
+            transform: translateY(-3px);
+        }
+        .card h3 {
+            color: #fff;
+            font-size: 1.2em;
+            margin-bottom: 8px;
+        }
+        .card p {
+            color: #999;
+            font-size: 0.95em;
+        }
+        .card .year {
+            color: #ff6b35;
+            font-size: 0.8em;
+            font-weight: 600;
+        }
+        .patent-list {
+            list-style: none;
+            padding: 0;
+        }
+        .patent-list li {
+            padding: 12px 0;
+            border-bottom: 1px solid #1a1a1a;
+            color: #ccc;
+        }
+        .patent-list li:last-child {
+            border-bottom: none;
+        }
+        .patent-list .patent-year {
+            color: #ff6b35;
+            font-weight: 600;
+            margin-right: 10px;
+        }
+        .contact {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            padding: 10px 0;
+        }
+        .contact a {
+            color: #ff6b35;
+            text-decoration: none;
+        }
+        .contact a:hover {
+            text-decoration: underline;
+        }
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 30px 0 20px;
+            color: #555;
+            font-size: 0.9em;
+            border-top: 1px solid #1a1a1a;
+            margin-top: 20px;
+        }
+        @media (max-width: 768px) {
+            .grid-2, .grid-3 {
+                grid-template-columns: 1fr;
+            }
+            header h1 {
+                font-size: 2em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+
+        <!-- HEADER -->
+        <header>
+            <h1>Malek AOUADJ</h1>
+            <p class="subtitle">Ingénieur R&D Senior — Systèmes Critiques Défense-Grade</p>
+            <div class="badges">
+                <span class="badge">🛡️ 12 brevets</span>
+                <span class="badge">⚙️ 20+ ans</span>
+                <span class="badge badge-dark">DGA</span>
+                <span class="badge badge-dark">SCAC</span>
+                <span class="badge badge-dark">HDPI</span>
+            </div>
+        </header>
+
+        <!-- PROJETS -->
+        <section>
+            <h2>🔬 Projets R&D Défense</h2>
+            <div class="grid-3">
+                <div class="card">
+                    <h3>🛡️ SCAC</h3>
+                    <p>Système Cognitif Anti-Capture</p>
+                    <p style="color:#888;font-size:0.85em;">Architecture cognitive pour systèmes autonomes critiques</p>
+                    <span class="year">2024-2025</span>
+                </div>
+                <div class="card">
+                    <h3>💾 HDPI</h3>
+                    <p>Hard Disc Processor Inside</p>
+                    <p style="color:#888;font-size:0.85em;">Architecture embarquée pour stockage intelligent</p>
+                    <span class="year">2024-2025</span>
+                </div>
+                <div class="card">
+                    <h3>🧠 EXPLORAMA AI</h3>
+                    <p>Laboratoire d'innovation</p>
+                    <p style="color:#888;font-size:0.85em;">Architectures cognitives distribuées</p>
+                    <span class="year">2024-2025</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- BREVETS -->
+        <section>
+            <h2>📜 Brevets — 12 titres</h2>
+            <ul class="patent-list">
+                <li><span class="patent-year">2023</span> Dispositif de contrôle intelligent pour système mécatronique embarqué</li>
+                <li><span class="patent-year">2022</span> Procédé d'optimisation topologique pour composants mécaniques</li>
+                <li><span class="patent-year">2021</span> Système de capteur intelligent pour environnement industriel</li>
+                <li><span class="patent-year">2021</span> Architecture de contrôle redondante pour systèmes critiques</li>
+                <li><span class="patent-year">2020</span> Système de diagnostic embarqué pour maintenance prédictive</li>
+                <li><span class="patent-year">2020</span> Architecture de commande distribuée pour systèmes mécaniques critiques</li>
+                <li><span class="patent-year">2019</span> Dispositif d'amortissement adaptatif pour environnements sévères</li>
+                <li><span class="patent-year">2019</span> Dispositif de récupération d'énergie pour systèmes embarqués</li>
+                <li><span class="patent-year">2018</span> Système de transmission à rendement optimisé pour véhicules</li>
+                <li><span class="patent-year">2018</span> Dispositif de sécurité passive pour environnements explosifs</li>
+                <li><span class="patent-year">2017</span> Mécanisme de verrouillage haute fiabilité pour applications défense</li>
+            </ul>
+        </section>
+
+        <!-- COMPÉTENCES -->
+        <section>
+            <h2>🎯 Domaines d'expertise</h2>
+            <div class="grid-2">
+                <div class="card">
+                    <h3>🏛️ Architecture système critique</h3>
+                    <p>Défense-grade · Auditabilité · Traçabilité · Réversibilité</p>
+                </div>
+                <div class="card">
+                    <h3>📊 Analyse de sûreté</h3>
+                    <p>DFMEA · AMDEC · Sûreté de fonctionnement</p>
+                </div>
+                <div class="card">
+                    <h3>⚙️ Conception mécanique</h3>
+                    <p>CATIA V5 (expert) · Qualification composants · ISO GPS</p>
+                </div>
+                <div class="card">
+                    <h3>🤖 IA embarquée</h3>
+                    <p>Systèmes multi-agents · Décision robuste · Cyber-physique</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACT -->
+        <section>
+            <h2>📞 Contact</h2>
+            <div class="contact">
+                <p>📧 <a href="mailto:a2atouts@proton.me">a2atouts@proton.me</a></p>
+                <p>📱 +33 06 12 96 29 96</p>
+                <p>🔗 <a href="https://linkedin.com/in/malek-aouadj" target="_blank">LinkedIn</a></p>
+                <p>📍 Lugrin (74500), France</p>
+            </div>
+        </section>
+
+        <!-- FOOTER -->
+        <footer>
+            <p>© 2026 Malek AOUADJ — Propulsé par GitHub Pages</p>
+        </footer>
+
+    </div>
+</body>
+</html>
